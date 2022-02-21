@@ -1,0 +1,1 @@
+-inca nu am lucrat complet, doar am incercat fara metode
