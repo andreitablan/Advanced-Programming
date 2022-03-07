@@ -14,7 +14,7 @@ public class Network {
     public void afisare()
     {
         for(int index=0;index<nodes.size();index ++)
-            System.out.println(" " + nodes.get(index));
+            System.out.println(" " + nodes.get(index).getName());
     }
 
     @Override
