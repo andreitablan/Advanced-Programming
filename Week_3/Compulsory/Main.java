@@ -1,21 +1,39 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
-    public static void main(String[] args)
-    {
-       Network Net= new Network();
-       Node V1=new Node("V1");
-       Node V2=new Node("V2");
-       Node V3=new Node("V3");
-       Node V4=new Node("V4");
-       Node V5=new Node("V5");
-       Node V6=new Node("V6");
+   public static void main(String[] args){
+      Network N=new Network();
 
-       Net.addNode(V1);
-       Net.addNode(V2);
-       Net.addNode(V3);
-       Net.addNode(V4);
-       Net.addNode(V5);
-       Net.addNode(V6);
+      Computer V1=new Computer("v1");
+      V1.setAddress("1223.12");
+      V1.setStorageCapacity(1000);
+      N.addNode(V1);
 
-       Net.afisare();
-    }
+      Router V2=new Router("v2");
+      V2.setAddress("1234.11");
+      N.addNode(V2);
+
+      Switch V3=new Switch("v3");
+      V3.setAddress("1243.23.1");
+      N.addNode(V3);
+
+      Computer V4=new Computer("v4");
+      V4.setAddress("1223.32.32");
+      V4.setStorageCapacity(120);
+      N.addNode(V4);
+
+      Computer V5=new Computer("v5");
+      V5.setAddress("1223.12.233");
+      V5.setStorageCapacity(100);
+      N.addNode(V5);
+
+      Computer V6=new Computer("v6");
+      V6.setAddress("1223.12.232");
+      V6.setStorageCapacity(200);
+      N.addNode(V6);
+       
+      N.printSimpleNodes();
+
+   }
 }
