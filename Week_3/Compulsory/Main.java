@@ -32,7 +32,8 @@ public class Main {
       V6.setAddress("1223.12.232");
       V6.setStorageCapacity(200);
       N.addNode(V6);
-       
+      
+      N.sort();
       N.printSimpleNodes();
 
    }
