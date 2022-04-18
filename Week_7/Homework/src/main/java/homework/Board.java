@@ -11,7 +11,7 @@ public class Board {
 
     private HashMap<Player, List<String>> formedWords;
 
-    private HashMap<Player, Integer> playerScore;
+    private HashMap<String, Integer> playerScore;
 
     /**
      * The basic constructor for this class
@@ -39,14 +39,15 @@ public class Board {
 
         int existingScore = 0;
         if (!playerScore.containsKey(player)) {
-            playerScore.put(player, newScore);
+            playerScore.put(player.getName(), newScore);
             existingScore = newScore;
         } else {
             existingScore = playerScore.get(player);
             existingScore = existingScore + newScore;
-            playerScore.put(player, existingScore);
+            playerScore.put(player.getName(), existingScore);
         }
     }
+
 
     @Override
     public String toString() {
