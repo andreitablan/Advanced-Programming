@@ -46,6 +46,6 @@ public class CityRepository {
      * @return
      */
     public List<City> findByName(String name) {
-        return entityManager.createQuery("SELECT city FROM City city WHERE city.name=:nume", City.class).setParameter("nume", name).getResultList();
+        return entityManager.createNamedQuery("City.findByName").setParameter("nume", name).getResultList();
     }
 }
