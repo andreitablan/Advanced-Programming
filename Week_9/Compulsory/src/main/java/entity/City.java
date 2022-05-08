@@ -10,6 +10,9 @@ import jakarta.persistence.Table;
  */
 @Entity
 @Table(name = "CITIES")
+@NamedQueries({
+        @NamedQuery(name = "City.findByName",
+                query = "SELECT city1 FROM City city1 WHERE city1.name=:n
 public class City {
     @Id
     @Column(name = "ID", nullable = false)
