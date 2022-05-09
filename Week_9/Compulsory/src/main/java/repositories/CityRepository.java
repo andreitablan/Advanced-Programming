@@ -15,6 +15,7 @@ public class CityRepository {
     ManagementEntityManagerFactory singleton = ManagementEntityManagerFactory.getInstance();
     EntityManagerFactory entityManagerFactory = singleton.getEntityManagerFactory();
     EntityManager entityManager = entityManagerFactory.createEntityManager();
+    EntityTransaction transaction = entityManager.getTransaction();
 
     public CityRepository() {
     }
@@ -25,7 +26,11 @@ public class CityRepository {
      * @param entity
      */
     public void create(City entity) {
-        entityManager.persist(entity);
+        try{transaction.begin();
+            entityManager.persist(entity);
+            transaction.commit();
+            System.out.println("We inserted a entity");
+        } catch (Exception e) {}
     }
 
     /**
