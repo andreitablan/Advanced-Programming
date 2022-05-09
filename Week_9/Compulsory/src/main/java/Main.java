@@ -20,16 +20,16 @@ public class Main {
 
         try {
             transaction.begin();
-            City Iasi = new City();
-            Iasi.setId(1002L);
-            Iasi.setCapital(0L);
-            Iasi.setCountry("Romania");
-            Iasi.setName("Iasi");
-            Iasi.setLatitude(47.17);
-            Iasi.setLongitude(27.57);
+            City city = new City();
+            city.setId(1002L);
+            city.setCapital(0L);
+            city.setCountry("Romania");
+            city.setName("Iasi");
+            city.setLatitude(47.17);
+            city.setLongitude(27.57);
 
             CityRepository cityRepository = new CityRepository();
-            cityRepository.create(Iasi);
+            cityRepository.create(city);
             System.out.println(cityRepository.findById(10L).getName());
             List<City> myCitiesList = cityRepository.findByName("Bucharest");
             for (int index = 0; index < myCitiesList.size(); index++)
