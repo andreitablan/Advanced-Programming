@@ -1,3 +1,3 @@
 # Advanced Programming
 ### Relevant links
-[Advanced programming course](https://profs.info.uaic.ro/~acf/java/)
+[Advanced Programming - course page](https://profs.info.uaic.ro/~acf/java/)
